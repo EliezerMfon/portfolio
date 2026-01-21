@@ -6,177 +6,267 @@
     <title>Developer Portfolio - About</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Fritech Devs</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <div class="logo-icon"><img src="logo.jpg" alt="" width="100px" height="100px"></div>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item">
+                <a href="index.html">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item active">
+                <a href="about.html">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                    <span>About</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="projects.html">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                    </svg>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span>Contact</span>
+                </a>
+            </li>
         </ul>
+        <div class="sidebar-footer">
+            <div class="theme-toggle">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                </svg>
+            </div>
+        </div>
     </nav>
 
-    <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <div class="page-header-content">
-                <div class="section-number">01 / About</div>
-                <h1 class="page-title">Building The Future,<br>One Line At A Time</h1>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <h1 class="page-title">About Me</h1>
+                <p class="page-subtitle">Get to know me better</p>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <!-- About Content -->
-    <section class="about-section">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="lead">
-                        I'm a passionate developer with a keen eye for detail and a drive to create 
-                        exceptional digital experiences that make a difference.
+        <!-- About Content -->
+        <div class="about-layout">
+            <!-- Main About Card -->
+            <section class="about-card glass-card">
+                <h2 class="card-title">My Story</h2>
+                <div class="about-content-text">
+                    <p class="lead-text">
+                        I'm a passionate full-stack developer with a keen eye for detail and a 
+                        drive to create exceptional digital experiences that make a real difference.
                     </p>
                     <p>
-                        My journey in development began with curiosity and has evolved into a career 
-                        focused on building scalable, user-centric applications. I believe in writing 
-                        clean code, embracing best practices, and continuously learning new technologies 
-                        to stay at the forefront of the industry.
+                        My journey in software development began over 5 years ago when I discovered 
+                        the power of code to solve real-world problems. Since then, I've had the 
+                        privilege of working with startups, agencies, and enterprise clients, helping 
+                        them bring their visions to life through clean, scalable, and maintainable code.
                     </p>
                     <p>
-                        When I'm not coding, you'll find me exploring new frameworks, contributing to 
-                        open-source projects, or sharing knowledge with the developer community. I'm 
-                        passionate about mentoring aspiring developers and believe in the power of 
-                        collaboration and knowledge sharing.
+                        I believe in continuous learning and staying ahead of the curve. Whether it's 
+                        exploring the latest frameworks, contributing to open-source projects, or 
+                        mentoring aspiring developers, I'm always looking for ways to grow and give back 
+                        to the community that has given me so much.
                     </p>
                     <p>
-                        My approach to development is holistic—I don't just write code, I craft solutions 
-                        that solve real problems and deliver tangible value to users and businesses alike.
+                        When I'm not coding, you'll find me experimenting with new technologies, 
+                        reading tech blogs, or working on personal projects that push the boundaries 
+                        of what's possible on the web.
                     </p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <div class="stat-number">2+</div>
-                        <div class="stat-label">Years Experience</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5+</div>
-                        <div class="stat-label">Projects Completed</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">30+</div>
-                        <div class="stat-label">Happy Clients</div>
-                    </div>
-                    <div class="stat-item">
-                        <div class="stat-number">5k+</div>
-                        <div class="stat-label">Lines of Code</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- Skills Section -->
-    <section class="skills-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-number">02 / Skills</div>
-                <h2 class="section-title">Technical Expertise</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3 class="skill-title">Languages</h3>
-                    <ul class="skill-list">
-                        <li>JavaScript</li>
-                        <li>Python</li>
-                        <li>HTML5 / CSS3</li>
-                        <li>SQL</li>
-                        <li>PHP</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-title">Frontend</h3>
-                    <ul class="skill-list">
-                        <li>React / Next.js</li>
-                        <li>Tailwind CSS</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-title">Backend</h3>
-                    <ul class="skill-list">
-                        <li>Node.js / Express</li>
-                        <li>Django / Flask</li>
-                        <li>GraphQL / REST API</li>
-                        <li>PostgreSQL / MongoDB</li>
-                    </ul>
-                </div>
-                <div class="skill-category">
-                    <h3 class="skill-title">DevOps & Tools</h3>
-                    <ul class="skill-list">
-                        <li>Git / GitHub</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+            <!-- Skills Section -->
+            <section class="skills-detailed">
+                <h2 class="card-title">Technical Skills</h2>
+                <div class="skills-categories">
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <h3>Frontend Development</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">React / Next.js</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">TypeScript</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Tailwind CSS</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 92%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-    <!-- Experience Timeline -->
-    <section class="experience-section">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-number">03 / Experience</div>
-                <h2 class="section-title">Professional Journey</h2>
-            </div>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">2024 - present</div>
-                    <div class="timeline-content">
-                        <h3>Full-Stack Developer</h3>
-                        <h4>Startup Solutions</h4>
-                        <p>Built and maintained multiple client projects, focusing on React and Node.js applications with cloud deployment on AWS.</p>
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <h3>Backend Development</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Node.js / Express</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Python</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">PostgreSQL / MongoDB</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category-card glass-card">
+                        <div class="category-header">
+                            <h3>DevOps & Cloud</h3>
+                        </div>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                </div>
+                               
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Docker</span>
+                                    <span class="skill-level">Advanced</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 78%"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="skill-item">
+                                <div class="skill-info">
+                                    <span class="skill-name">Git / GitHub Actions</span>
+                                    <span class="skill-level">Expert</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 95%"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2020 - 2024</div>
-                    <div class="timeline-content">
-                        <h3>Junior Developer</h3>
-                        <h4>Digital Agency</h4>
-                        <p>Developed responsive websites and web applications, collaborated with designers and project managers to deliver quality products.</p>
+            </section>
+
+            <!-- Experience Timeline -->
+            <section class="experience-section">
+                <h2 class="card-title">Professional Experience</h2>
+                <div class="timeline-container">
+                    
+
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Full-Stack Developer</h3>
+                                    <h4>Startup Solutions</h4>
+                                </div>
+                                <span class="timeline-date">2025 - present</span>
+                            </div>
+                            <p>Built and maintained multiple client projects with focus on performance and user experience. Collaborated with cross-functional teams to deliver high-quality products on tight deadlines.</p>
+                            <div class="timeline-tags">
+                                <span>Vue.js</span>
+                                <span>Python</span>
+                                <span>MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item glass-card">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div>
+                                    <h3>Junior Developer</h3>
+                                    <h4>Digital Agency</h4>
+                                </div>
+                                <span class="timeline-date">2024 - 2025</span>
+                            </div>
+                            <p>Developed responsive websites and web applications, working closely with designers and project managers to deliver quality products that exceeded client expectations.</p>
+                            <div class="timeline-tags">
+                                <span>JavaScript</span>
+                                <span>HTML/CSS</span>
+                                <span>WordPress</span>
+                                <span>UI/UX</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Interested in Working Together?</h2>
-                <p>Let's discuss how we can collaborate to create something exceptional.</p>
-                <a href="contact.html" class="btn btn-primary">Get In Touch</a>
-            </div>
+           
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-text">
-                © 2026 All rights reserved.
-            </div>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
-
-
