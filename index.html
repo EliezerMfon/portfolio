@@ -3,138 +3,333 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELIEZER MFON</title>
+    <title>Developer Portfolio - Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">Fritech Devs</div>
-        <ul class="nav-links">
-            <li><a href="index.html" class="active">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="contact.html">Contact</a></li>
+    <!-- Animated Background -->
+    <div class="background-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-container">
+                <div class="logo-icon"><img src="logo.jpg" alt="" width="100px" height="100px"></div>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li class="nav-item active">
+                <a href="index.html">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                    <span>Home</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="about.html">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/>
+                    </svg>
+                    <span>About</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="projects.html">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                    </svg>
+                    <span>Projects</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="contact.html">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span>Contact</span>
+                </a>
+            </li>
         </ul>
+        <div class="sidebar-footer">
+            <div class="theme-toggle">
+                <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>
+                </svg>
+            </div>
+        </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="top-header">
+            <div class="header-left">
+                <h1 class="page-title">Fritech Devs</h1>
+                <p class="page-subtitle"></p>
+            </div>
+            
+        </header>
+
+        <!-- Hero Card -->
+        <section class="hero-card glass-card">
             <div class="hero-content">
-                <div class="hero-label">Full-Stack Developer</div>
-                <h1 class="hero-title">
-                    Crafting Digital<br>
-                    <span class="gradient-text">Experiences</span>
-                </h1>
+                <div class="profile-section">
+                    <div class="profile-image-wrapper">
+                        <!-- Replace this SVG with your actual profile picture -->
+                        <div class="profile-placeholder">
+                        <img src="6utwdk.jpg" alt="Profile Picture" class="profile-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+
+                        </div>
+                        <div class="status-indicator"></div>
+                    </div>
+                    <div class="profile-info">
+                        <h2 class="hero-title">Hi, I'm <span class="gradient-text">Eliezer Mfon</span></h2>
+                        <p class="hero-role">Full-Stack Developer & Creative Problem Solver</p>
+                        <div class="hero-badges">
+                            <span class="badge">Available for Work</span>
+                            <span class="badge badge-accent">2+ Years Experience</span>
+                        </div>
+                    </div>
+                </div>
                 <p class="hero-description">
-                    Building elegant, scalable solutions that transform ideas into reality. 
-                    Specialized in modern web technologies and innovative problem-solving.
+                    Crafting elegant, scalable solutions that transform complex challenges into 
+                    intuitive digital experiences. Specialized in modern web technologies with 
+                    a passion for clean code and user-centric design.
                 </p>
-                <div class="cta-buttons">
-                    <a href="projects.html" class="btn btn-primary">View Projects</a>
-                    <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                <div class="hero-actions">
+                    <a href="projects.html" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                        </svg>
+                    </a>
+                    <a href="contact.html" class="btn btn-secondary">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                        </svg>
+                        <span>Let's Talk</span>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Quick Stats Section -->
-    <section class="quick-stats">
-        <div class="container">
+        <!-- Stats Grid -->
+        <section class="stats-section">
             <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">2+</div>
-                    <div class="stat-label">Years Experience</div>
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">7+</h3>
+                        <p class="stat-label">Projects Completed</p>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">5+</div>
-                    <div class="stat-label">Projects Completed</div>
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">10+</h3>
+                        <p class="stat-label">Happy Clients</p>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">30+</div>
-                    <div class="stat-label">Happy Clients</div>
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">2+</h3>
+                        <p class="stat-label">Years Experience</p>
+                    </div>
                 </div>
-                <div class="stat-card">
-                    <div class="stat-number">10K+</div>
-                    <div class="stat-label">Lines of Code</div>
+                <div class="stat-card glass-card">
+                    <div class="stat-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                        </svg>
+                    </div>
+                    <div class="stat-content">
+                        <h3 class="stat-number">93%</h3>
+                        <p class="stat-label">Success Rate</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Featured Work Preview -->
-    <section class="featured-preview">
-        <div class="container">
+        <!-- Featured Projects -->
+        <section class="featured-projects">
             <div class="section-header">
-                <div class="section-number">Featured Work</div>
-                <h2 class="section-title">Latest Projects</h2>
+                <div>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <p class="section-subtitle">Recent work showcasing my expertise</p>
+                </div>
+                <a href="projects.html" class="view-all-link">
+                    View All
+                    <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/>
+                    </svg>
+                </a>
             </div>
-            <div class="preview-grid">
-                <div class="preview-card">
-                    <div class="preview-image">
-                        <div class="preview-placeholder">01</div>
+            <div class="projects-grid">
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <img src="project1.jpg" alt="Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
                     </div>
-                    <div class="preview-info">
-                        <h3>E-Commerce Platform</h3>
-                        <p>Full-stack solution with real-time inventory management and secure payment processing.</p>
-                        
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
+                        </div>
+                        <h3 class="project-title">E-Commerce Platform</h3>
+                        <p class="project-description">Full-stack solution with real-time inventory and secure payments</p>
                     </div>
                 </div>
-                <div class="preview-card">
-                    <div class="preview-image">
-                        <div class="preview-placeholder">02</div>
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <img src="project2.jpg" alt="Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
                     </div>
-                    <div class="preview-info">
-                        <h3>Task Management App</h3>
-                        <p>Collaborative project management tool with real-time updates and team communication.</p>
-                        
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Vue.js</span>
+                            <span class="tag">Firebase</span>
+                        </div>
+                        <h3 class="project-title">Task Management App</h3>
+                        <p class="project-description">Collaborative tool with real-time updates and analytics</p>
                     </div>
                 </div>
-                <div class="preview-card">
-                    <div class="preview-image">
-                        <div class="preview-placeholder">03</div>
+                <div class="project-card glass-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                                </svg>
+                            </a>
+                        </div>
+                        <img src="project3.jpg" alt="Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
                     </div>
-                    <div class="preview-info">
-                        <h3>AI Content Generator</h3>
-                        <p>Intelligent content generation platform powered by machine learning algorithms.</p>
-                        
+                    <div class="project-content">
+                        <div class="project-tags">
+                            <span class="tag">Next.js</span>
+                            <span class="tag">AI</span>
+                        </div>
+                        <h3 class="project-title">AI Content Generator</h3>
+                        <p class="project-description">ML-powered platform for creating marketing content</p>
                     </div>
                 </div>
             </div>
-            <div class="view-all">
-                <a href="projects.html" class="btn btn-primary">View All Projects</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Let's Build Something Amazing Together</h2>
-                <p>Have a project in mind? I'd love to hear about it and see how I can help bring your ideas to life.</p>
-                <a href="contact.html" class="btn btn-primary">Start a Conversation</a>
+        <!-- Skills Overview -->
+        <section class="skills-overview">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title">Tech Stack</h2>
+                    <p class="section-subtitle">Technologies I work with daily</p>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="skills-grid">
+                <div class="skill-card glass-card">
+                    <h4>Frontend</h4>
+                    <div class="skill-tags">
+                        <span>React</span>
+                        <span>Vue.js</span>
+                        <span>TypeScript</span>
+                        <span>Next.js</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <h4>Backend</h4>
+                    <div class="skill-tags">
+                        <span>Node.js</span>
+                        <span>Python</span>
+                        <span>GraphQL</span>
+                        <span>PostgreSQL</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <h4>DevOps</h4>
+                    <div class="skill-tags">
+                        <span>Docker</span>
+                    </div>
+                </div>
+                <div class="skill-card glass-card">
+                    <h4>Design</h4>
+                    <div class="skill-tags">
+                        <span>Photoshop</span>
+                        <span>UI/UX</span>
+                        <span>Tailwind</span>
+                       
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-text">
-                © 2026 All rights reserved.
-            </div>
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
-    </footer>
+    <script>
+        // Theme Toggle Functionality
+        const themeToggle = document.querySelector('.theme-toggle');
+        const htmlElement = document.documentElement;
+        
+        // Check for saved theme preference or default to 'dark'
+        const currentTheme = localStorage.getItem('theme') || 'dark';
+        htmlElement.setAttribute('data-theme', currentTheme);
+        
+        // Update toggle icon based on current theme
+        function updateToggleIcon() {
+            const theme = htmlElement.getAttribute('data-theme');
+            const icon = themeToggle.querySelector('svg');
+            
+            if (theme === 'light') {
+                // Moon icon for dark mode option
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>';
+            } else {
+                // Sun icon for light mode option
+                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>';
+            }
+        }
+        
+        updateToggleIcon();
+        
+        // Toggle theme on click
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = htmlElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            htmlElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateToggleIcon();
+        });
+    </script>
+
 </body>
 </html>
