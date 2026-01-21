@@ -1320,66 +1320,167 @@ body {
             color: var(--text-secondary);
         }
 
-        .certifications-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 24px;
-        }
 
-        .cert-card {
-            padding: 32px;
-            text-align: center;
-        }
+        /* ==================================================
+   MOBILE RESPONSIVENESS
+   Keeps existing desktop design intact
+================================================== */
 
-        .cert-icon {
-            font-size: 48px;
-            margin-bottom: 20px;
-        }
+@media (max-width: 1024px) {
+  .main-content {
+    padding: 32px 24px;
+  }
+}
 
-        .cert-card h3 {
-            font-size: 18px;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
+/* =========================
+   TABLETS & PHONES
+========================= */
+@media (max-width: 768px) {
 
-        .cert-card p {
-            font-size: 14px;
-            color: var(--text-secondary);
-            margin-bottom: 12px;
-        }
+  /* Prevent horizontal scrolling */
+  html, body {
+    overflow-x: hidden;
+  }
 
-        .cert-year {
-            display: inline-block;
-            padding: 4px 12px;
-            background: rgba(102, 126, 234, 0.1);
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            color: var(--accent-primary);
-        }
+  /* SIDEBAR */
+  .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
 
-        @media (max-width: 768px) {
-            .skills-categories {
-                grid-template-columns: 1fr;
-            }
+  .sidebar.active {
+    transform: translateX(0);
+  }
 
-            .timeline-container::before {
-                left: 16px;
-            }
+  /* MAIN CONTENT */
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px 16px;
+  }
 
-            .timeline-item {
-                padding-left: 56px;
-            }
+  /* HEADER */
+  .top-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
 
-            .timeline-marker {
-                left: 8px;
-            }
+  /* HERO SECTION */
+  .profile-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
 
-            .timeline-header {
-                flex-direction: column;
-            }
+  .hero-title {
+    font-size: 26px;
+  }
 
-            .certifications-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+  .hero-description {
+    font-size: 15px;
+  }
+
+  .hero-actions {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ABOUT */
+  .about-card {
+    padding: 24px 20px;
+  }
+
+  /* SKILLS */
+  .skills-categories {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-category-card {
+    padding: 24px 20px;
+  }
+
+  /* PROJECTS & CARDS */
+  .projects-grid,
+  .stats-grid,
+  .skills-grid,
+  .certifications-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* TIMELINE */
+  .timeline-container::before {
+    left: 8px;
+  }
+
+  .timeline-item {
+    padding-left: 40px;
+    padding-right: 16px;
+  }
+
+  .timeline-marker {
+    left: 0;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .timeline-date {
+    align-self: flex-start;
+  }
+
+  /* CONTACT */
+  .contact-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-card,
+  .form-card {
+    padding: 24px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .social-links-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   SMALL PHONES
+========================= */
+@media (max-width: 480px) {
+
+  .page-title {
+    font-size: 22px;
+  }
+
+  .card-title {
+    font-size: 22px;
+  }
+
+  .lead-text {
+    font-size: 16px;
+  }
+
+  .hero-title {
+    font-size: 24px;
+  }
+
+  .skill-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
