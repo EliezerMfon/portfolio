@@ -21,7 +21,7 @@
     <nav class="sidebar">
         <div class="sidebar-header">
             <div class="logo-container">
-                <div class="logo-icon"><img src="logo.jpg" alt="" width="100px" height="100px"></div>
+                <div class="logo-icon"><img src="logo.jpg" alt="logo" width="100px" height="100px" style="border-radius: 50%;"></div>
             </div>
         </div>
         <ul class="nav-menu">
@@ -69,6 +69,23 @@
 
     <!-- Main Content -->
     <main class="main-content">
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation">
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+
+        <!-- Mobile Theme Toggle -->
+        <button class="mobile-theme-toggle" aria-label="Toggle theme">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+            </svg>
+        </button>
+
+        <!-- Mobile Overlay -->
+        <div class="mobile-overlay"></div>
+
         <!-- Header -->
         <header class="top-header">
             <div class="header-left">
@@ -298,6 +315,7 @@
     <script>
         // Theme Toggle Functionality
         const themeToggle = document.querySelector('.theme-toggle');
+        const mobileThemeToggle = document.querySelector('.mobile-theme-toggle');
         const htmlElement = document.documentElement;
         
         // Check for saved theme preference or default to 'dark'
@@ -307,28 +325,59 @@
         // Update toggle icon based on current theme
         function updateToggleIcon() {
             const theme = htmlElement.getAttribute('data-theme');
-            const icon = themeToggle.querySelector('svg');
+            const sidebarPath = themeToggle.querySelector('path');
+            const mobilePath = mobileThemeToggle.querySelector('path');
             
             if (theme === 'light') {
                 // Moon icon for dark mode option
-                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/>';
+                sidebarPath.setAttribute('d', 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z');
+                mobilePath.setAttribute('d', 'M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z');
             } else {
                 // Sun icon for light mode option
-                icon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>';
+                sidebarPath.setAttribute('d', 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z');
+                mobilePath.setAttribute('d', 'M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z');
             }
         }
         
         updateToggleIcon();
         
-        // Toggle theme on click
-        themeToggle.addEventListener('click', () => {
+        // Toggle theme function
+        function toggleTheme() {
             const currentTheme = htmlElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
             
             htmlElement.setAttribute('data-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateToggleIcon();
+        }
+        
+        // Toggle theme on click for both buttons
+        themeToggle.addEventListener('click', toggleTheme);
+        mobileThemeToggle.addEventListener('click', toggleTheme);
+
+        // Mobile Menu Toggle Functionality
+        const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        const mainContent = document.querySelector('.main-content');
+        const mobileOverlay = document.querySelector('.mobile-overlay');
+
+        function toggleMobileMenu() {
+            sidebar.classList.toggle('active');
+            mobileMenuToggle.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+        }
+
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+
+        // Close sidebar when clicking outside on mobile
+        mainContent.addEventListener('click', (e) => {
+            if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
+                toggleMobileMenu();
+            }
         });
+
+        // Close sidebar when clicking overlay
+        mobileOverlay.addEventListener('click', toggleMobileMenu);
     </script>
 
 </body>
