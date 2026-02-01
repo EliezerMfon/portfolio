@@ -139,6 +139,8 @@ body {
     display: flex;
     flex-direction: column;
     animation: slideInLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform: translateX(0);
+    transition: transform 0.3s ease;
 }
 
 .sidebar-header {
