@@ -314,11 +314,13 @@ body {
     background: rgba(0, 0, 0, 0.5);
     z-index: 99;
     opacity: 0;
+    pointer-events: none;
     transition: opacity 0.3s ease;
 }
 
 .mobile-overlay.active {
     opacity: 1;
+    pointer-events: auto;
 }
 
 /* Top Header */
